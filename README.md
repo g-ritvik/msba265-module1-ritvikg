@@ -38,7 +38,7 @@
 ## Project Structure
 
 ```text
-msba265_module1/
+msba265-module1-ritvikg/
 ├── .gitignore
 ├── README.md
 ├── requirements.txt
