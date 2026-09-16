@@ -19,10 +19,9 @@ The project covers raw data ingestion, data quality verification, business data 
 * [Setup](#setup)
 * [Reproduction](#reproduction)
 
-  * [1. Clone the Repository](#1-clone-the-repository)
-  * [2. Download the Raw Dataset](#2-download-the-raw-dataset)
-  * [3. Run the Exploratory Analysis](#3-run-the-exploratory-analysis)
-  * [4. Run the Production Outlier Pipeline](#4-run-the-production-outlier-pipeline)
+  * [1. Download the Raw Dataset](#1-download-the-raw-dataset)
+  * [2. Run the Exploratory Analysis](#2-run-the-exploratory-analysis)
+  * [3. Run the Production Outlier Pipeline](#3-run-the-production-outlier-pipeline)
 * [Expected Results](#expected-results)
 * [Project Artifacts](#project-artifacts)
 
@@ -90,6 +89,13 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
+**If PowerShell blocks virtual environment activation**, run the following command in the current PowerShell session, then activate the environment:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+.\venv\Scripts\activate
+```
+
 ### 3. Install Required Dependencies
 
 With the virtual environment activated:
@@ -100,16 +106,7 @@ pip install -r requirements.txt
 
 ## Reproduction
 
-### 1. Clone the Repository
-
-If you have not already cloned the repository:
-
-```powershell
-git clone https://github.com/g-ritvik/msba265-module1-ritvikg.git
-cd msba265-module1-ritvikg
-```
-
-### 2. Download the Raw Dataset
+### 1. Download the Raw Dataset
 
 Run:
 
@@ -121,7 +118,7 @@ This downloads the dataset and creates:
 
 [`data/raw_business_data.csv`](data/raw_business_data.csv)
 
-### 3. Run the Exploratory Analysis
+### 2. Run the Exploratory Analysis
 
 Open:
 
@@ -137,7 +134,7 @@ The notebook generates:
 * [`reports/figures/correlation_heatmap.png`](reports/figures/correlation_heatmap.png)
 * [`reports/figures/feature_distributions.png`](reports/figures/feature_distributions.png)
 
-### 4. Run the Production Outlier Pipeline
+### 3. Run the Production Outlier Pipeline
 
 Run from the project root:
 
