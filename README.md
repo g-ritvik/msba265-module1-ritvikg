@@ -128,6 +128,12 @@ Open:
 
 [`notebooks/01_eda_and_data_dictionary.ipynb`](notebooks/01_eda_and_data_dictionary.ipynb)
 
+OR Run:
+
+```powershell
+code notebooks\01_eda_and_data_dictionary.ipynb
+```
+
 Select the project's `venv` Python environment as the notebook kernel and run all cells from top to bottom.
 
 The notebook performs the data audit, Business Data Dictionary generation, skewness diagnostics, correlation analysis, distribution analysis, and outlier audit.
