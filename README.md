@@ -3,12 +3,10 @@
 ## Foundational Module 1: Practical Homework Assignment
 
 **Student:** Ritvik Genugula
+
 **Instructor:** Shyla Solis
+
 **Term:** Fall 2026
-
-This repository contains the complete, reproducible submission for the MSBA 265 Foundational Module 1 Practical Homework Assignment.
-
-The project covers raw data ingestion, data quality verification, business data dictionary creation, exploratory data analysis, correlation analysis, distribution analysis, and production outlier filtering.
 
 ---
 
