@@ -133,9 +133,9 @@ The notebook performs the data audit, Business Data Dictionary generation, skewn
 
 The notebook generates:
 
-* `reports/data_dictionary.csv`
-* `reports/figures/correlation_heatmap.png`
-* `reports/figures/feature_distributions.png`
+* [`reports/data_dictionary.csv`](reports/data_dictionary.csv)
+* [`reports/figures/correlation_heatmap.png`](reports/figures/correlation_heatmap.png)
+* [`reports/figures/feature_distributions.png`](reports/figures/feature_distributions.png)
 
 ### 4. Run the Production Outlier Pipeline
 
