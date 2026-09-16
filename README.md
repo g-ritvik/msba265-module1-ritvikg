@@ -86,13 +86,17 @@ From the project root:
 
 ```powershell
 python -m venv venv
-.\venv\Scripts\activate
 ```
 
-**If PowerShell blocks virtual environment activation**, run the following command in the current PowerShell session, then activate the environment:
+**If PowerShell blocks script execution**, run the following command in the current PowerShell session:
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+```
+
+Then activate the virtual environment:
+
+```powershell
 .\venv\Scripts\activate
 ```
 
