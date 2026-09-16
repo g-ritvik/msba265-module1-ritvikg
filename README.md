@@ -3,9 +3,7 @@
 ## Foundational Module 1: Practical Homework Assignment
 
 **Student:** Ritvik Genugula
-
 **Instructor:** Shyla Solis
-
 **Term:** Fall 2026
 
 This repository contains the complete, reproducible submission for the MSBA 265 Foundational Module 1 Practical Homework Assignment.
@@ -21,9 +19,11 @@ The project covers raw data ingestion, data quality verification, business data 
 * [Setup](#setup)
 * [Reproduction](#reproduction)
 
-  * [1. Download the Raw Dataset](#1-download-the-raw-dataset)
-  * [2. Run the Production Outlier Pipeline](#2-run-the-production-outlier-pipeline)
+  * [1. Clone the Repository](#1-clone-the-repository)
+  * [2. Download the Raw Dataset](#2-download-the-raw-dataset)
   * [3. Run the Exploratory Analysis](#3-run-the-exploratory-analysis)
+  * [4. Run the Production Outlier Pipeline](#4-run-the-production-outlier-pipeline)
+* [Expected Results](#expected-results)
 * [Project Artifacts](#project-artifacts)
 
   * [Analysis](#analysis)
@@ -72,26 +72,48 @@ The raw dataset contains **678,013 records and 12 features**.
 
 ## Setup
 
-From the project root, create and activate a Python virtual environment:
+### 1. Clone the Repository
 
-```text
-python -m venv venv
-venv\Scripts\activate
+From a terminal, navigate to the location where you want to store the project and run:
+
+```powershell
+git clone https://github.com/g-ritvik/msba265-module1-ritvikg.git
+cd msba265-module1-ritvikg
 ```
 
-Install the required dependencies:
+### 2. Create a Virtual Environment
 
-```text
+From the project root:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+### 3. Install Required Dependencies
+
+With the virtual environment activated:
+
+```powershell
 pip install -r requirements.txt
 ```
 
 ## Reproduction
 
-### 1. Download the Raw Dataset
+### 1. Clone the Repository
+
+If you have not already cloned the repository:
+
+```powershell
+git clone https://github.com/g-ritvik/msba265-module1-ritvikg.git
+cd msba265-module1-ritvikg
+```
+
+### 2. Download the Raw Dataset
 
 Run:
 
-```text
+```powershell
 python data/download_data.py
 ```
 
@@ -99,11 +121,27 @@ This downloads the dataset and creates:
 
 [`data/raw_business_data.csv`](data/raw_business_data.csv)
 
-### 2. Run the Production Outlier Pipeline
+### 3. Run the Exploratory Analysis
 
-Run:
+Open:
 
-```text
+[`notebooks/01_eda_and_data_dictionary.ipynb`](notebooks/01_eda_and_data_dictionary.ipynb)
+
+Select the project's `venv` Python environment as the notebook kernel and run all cells from top to bottom.
+
+The notebook performs the data audit, Business Data Dictionary generation, skewness diagnostics, correlation analysis, distribution analysis, and outlier audit.
+
+The notebook generates:
+
+* `reports/data_dictionary.csv`
+* `reports/figures/correlation_heatmap.png`
+* `reports/figures/feature_distributions.png`
+
+### 4. Run the Production Outlier Pipeline
+
+Run from the project root:
+
+```powershell
 python src/clean_outliers.py
 ```
 
@@ -111,13 +149,15 @@ This applies Tukey's **1.5 × IQR** rule to the `Density` feature and creates:
 
 [`data/cleaned_business_data.csv`](data/cleaned_business_data.csv)
 
-### 3. Run the Exploratory Analysis
+## Expected Results
 
-Open the Jupyter notebook:
+After successfully following the reproduction steps:
 
-[`notebooks/01_eda_and_data_dictionary.ipynb`](notebooks/01_eda_and_data_dictionary.ipynb)
-
-The notebook contains the data audit, business data dictionary generation, skewness diagnostics, correlation analysis, distribution analysis, and outlier audit.
+* Raw dataset: **678,013 rows × 12 columns**
+* Cleaned dataset: **600,447 rows × 12 columns**
+* Density outliers removed: **77,566 (11.44%)**
+* Business Data Dictionary generated in `reports/data_dictionary.csv`
+* Required figures generated in `reports/figures/`
 
 ## Project Artifacts
 
