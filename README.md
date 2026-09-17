@@ -85,7 +85,7 @@ cd msba265-module1-ritvikg
 From the project root:
 
 ```powershell
-python -m venv venv
+python -m venv msba265-module1-ritvikg
 ```
 
 **If PowerShell blocks script execution**, run the following command in the current PowerShell session:
@@ -97,7 +97,7 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 Then activate the virtual environment:
 
 ```powershell
-.\venv\Scripts\activate
+.\msba265-module1-ritvikg\Scripts\activate
 ```
 
 ### 3. Install Required Dependencies
@@ -128,13 +128,19 @@ Open:
 
 [`notebooks/01_eda_and_data_dictionary.ipynb`](notebooks/01_eda_and_data_dictionary.ipynb)
 
-OR Run:
+Or run:
 
 ```powershell
-code notebooks\01_eda_and_data_dictionary.ipynb
+code .\notebooks\01_eda_and_data_dictionary.ipynb
 ```
 
-Select the project's `venv` Python environment as the notebook kernel and run all cells from top to bottom.
+Select the project's **`msba265-module1-ritvikg`** Python environment as the notebook kernel:
+
+1. Open the notebook in VS Code.
+2. Click **Select Kernel** in the upper-right corner.
+3. Select **Python Environments**.
+4. Select **`msba265-module1-ritvikg`**.
+5. Run all cells from top to bottom.
 
 The notebook performs the data audit, Business Data Dictionary generation, skewness diagnostics, correlation analysis, distribution analysis, and outlier audit.
 
@@ -214,3 +220,8 @@ Python dependencies are listed in [`requirements.txt`](requirements.txt).
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge\&logo=matplotlib\&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge\&logo=jupyter\&logoColor=white)
+
+```
+
+**That's the version I'd commit.** The important fix is that the README now consistently identifies the environment as `msba265-module1-ritvikg`, so your classmate won't accidentally select your separate `msba265` Conda environment.
+```
